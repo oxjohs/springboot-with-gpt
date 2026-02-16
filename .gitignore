@@ -1,0 +1,76 @@
+# ------------------------------------------------------------------------------
+# Spring Boot / Gradle / Multi-IDE + macOS + Secrets + Frontend (monorepo-ready)
+# Repository: springboot-with-gpt
+# ------------------------------------------------------------------------------
+
+# --- Spring Initializr / misc ---
+HELP.md
+
+# --- Gradle ---
+.gradle
+build/
+# Keep Gradle wrapper JAR
+!gradle/wrapper/gradle-wrapper.jar
+# (Rare) Allow build directories under src (keep Initializr defaults)
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# --- STS (Spring Tool Suite) ---
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# --- IntelliJ IDEA ---
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# --- NetBeans ---
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# --- VS Code ---
+.vscode/
+
+# --- OS ---
+.DS_Store
+
+# --- Logs ---
+*.log
+
+# --- Local config & secrets ---
+# Block local profiles and developer-specific configs
+**/application-*.yml
+**/application-*.properties
+# Allow only the default config tracked in VCS
+!**/application.yml
+!**/application.properties
+
+# Common secret/cert/keystore files (SSO/SSL later)
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
+*.crt
+*.cer
+
+# --- Frontend (React later) ---
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
