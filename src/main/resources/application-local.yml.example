@@ -1,0 +1,13 @@
+# Local-only example configuration.
+# Copy this file to application-local.yml and adjust values for your machine.
+#
+# Why:
+# - Keep secrets & machine-specific configs out of Git
+# - Provide a template for onboarding
+# - Enable dev-only conveniences safely
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
